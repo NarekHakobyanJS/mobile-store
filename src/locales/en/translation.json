@@ -1,0 +1,47 @@
+{
+    "Navigation" : {
+        "main" : "Home",
+        "store" : "Store",
+        "about" : "About us",
+        "contact" : "Contacts"
+    },
+    "Description" : {
+        "price" : "Price",
+        "ram" : "Ram",
+        "memory" : "Memory"
+    },
+    "General" : {
+        "description" : "Description",
+        "general" : "General",
+        "warranty" : "Warranty",
+        "year" : "Year of release",
+        "os" : "Operation system"
+    },
+    "Display" : {
+        "display" : "Display",
+        "screenType" : "Screen Type",
+        "screenResolution" : "Screen resolution",
+        "screenSize" : "Screen size"
+    },
+    "Camera" : {
+        "camera" : "Camera",
+        "frontCamera" : "Front camera",
+        "mainCamera" : "Main camera"
+    },
+    "Memory" : {
+        "m" : "Memory & CPU",
+        "processor" : "Number of processor cores",
+        "CPU" : "CPU",
+        "RAM" : "RAM",
+        "cardSlot" : "Memory card slot",
+        "memory" : "Memory"
+    },
+    "Other" : {
+        "other" : "Other",
+        "weight" : "Weight",
+        "thickness" : "Тhickness",
+        "height" : "Height",
+        "width" : "Width"
+    }
+    
+}

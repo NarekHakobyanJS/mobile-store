@@ -1,0 +1,61 @@
+.card{
+    width: 260px;
+    border : 1px solid black;
+    -webkit-box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.52);
+    -moz-box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.52);
+    box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.52);
+    margin-bottom: 25px;
+    .card-item{
+        position: relative;
+        .add-to-heart{
+            position: absolute;
+            top: 5px;
+            cursor: pointer;
+            right: 5px;
+            font-size: 25px;
+            z-index: 999;
+        }
+        .card-img{
+            overflow: hidden;
+            cursor: pointer;
+            img{
+                width: 100%;
+                transition: .3s all linear;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .card-desc{
+            text-align: center;
+            padding: 8px;
+            h2{
+                margin : 0;
+                font-size: 18px;
+            }
+            h5{
+                margin : 0;
+                font-size: 16px;
+            }
+            p{
+                margin: 0;
+                font-size: 14px;
+                text-align:left;
+                padding-top: 9px ;
+            }
+        }
+        .add-to-cart{
+            font-size: 35px;
+            color : rgb(248, 27, 27);
+            position: absolute;
+            bottom: 3px;
+            right: 5px;
+            cursor: pointer;
+            transition: .3s all linear;
+            &:hover{
+                color: greenyellow;
+                transform: scale(1.05)
+            }
+        }
+    }
+}

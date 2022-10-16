@@ -1,0 +1,17 @@
+.lng{
+    display: flex;
+    align-items: center;
+    .en{
+        width: 24px;
+        height: 24px;
+        background: url("../../image/en.png");
+        margin-right: 25px;
+        cursor: pointer;
+    }
+    .am{
+        width: 24px;
+        height: 24px;
+        background: url("../../image/am.png");
+        cursor: pointer;
+    }
+}

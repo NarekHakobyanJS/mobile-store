@@ -1,0 +1,12 @@
+.active-btn{
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+.header{
+    width: 100%;
+    background: #EFF9FF;
+    border-bottom: .5px solid cyan;
+    margin-bottom: 25px;
+    position: sticky;
+    top : 0;
+    z-index: 9999;
+    -webkit-box-shadow: 1px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 1px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 1px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 120px;
+        }
+    }
+}
