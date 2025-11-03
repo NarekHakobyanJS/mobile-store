@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react'
+
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { Box } from '@mui/material'
 
-const Products = () => {
-  const [products, setProducts] = useState([])
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((res) => setProducts(res))
-  }, [])
+export const Products = ({products}) => {
+  
 
   return (
     <Box>
@@ -27,5 +22,3 @@ const Products = () => {
     </Box>
   )
 }
-
-export default Products

@@ -1,13 +1,27 @@
 import React from 'react'
-import { MenuItem, Tooltip, Button, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar } from '@mui/material';
+import { Button, AppBar, Box, Toolbar, IconButton, Typography, Container } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import { styled } from '@mui/material/styles';
+import Badge, { badgeClasses } from '@mui/material/Badge';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const pages = [{title : "Home", path : '/'}, {title : "Products", path : '/products'}];
+
+const pages = [{ title: "Home", path: '/' }, { title: "Products", path: '/products' }];
+
+
+
+const CartBadge = styled(Badge)`
+  & .${badgeClasses.badge} {
+    top: -12px;
+    right: -6px;
+  }
+`;
+
 
 function Header() {
 
   return (
-    <AppBar sx={{ backgroundColor: "orange", mb : '30px' }} position='sticky'>
+    <AppBar sx={{ backgroundColor: "orange", mb: '30px' }} position='sticky'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -25,11 +39,11 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-            Motorola
+            Mobile APP
           </Typography>
 
 
-          <Box sx={{ flexGrow: 1, display : 'flex', gap : '20px' }}>
+          <Box sx={{ flexGrow: 1, display: 'flex', gap: '20px' }}>
             {pages.map((page) => (
               <Button
                 component={NavLink}
@@ -42,11 +56,23 @@ function Header() {
               </Button>
             ))}
           </Box>
-         
+
+          <Box 
+          component={NavLink}
+          to='/carts'
+          >
+            <IconButton>
+              <ShoppingCartIcon fontSize="small" />
+              <CartBadge badgeContent={2} color="primary" overlap="circular" />
+            </IconButton>
+          </Box>
+
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
 export default Header;
+
+
 

@@ -1,9 +1,15 @@
 import React from 'react'
-import { Button, Card,CardContent,CardMedia,Typography,CardActionArea } from '@mui/material';
+import { Button, Card,CardContent,CardMedia,Typography,CardActionArea, Box } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { NavLink } from 'react-router-dom';
+
 export default function ProductCard({product}) {
   return (
     <Card sx={{ width: '300px' }}>
+      <Box
+      component={NavLink}
+      to={`/products/${product.id}`}
+      >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -19,6 +25,7 @@ export default function ProductCard({product}) {
           </Typography>
         </CardContent>
       </CardActionArea>
+      </Box>
       <Button
       sx={{width : '100%'}}
       startIcon={<ShoppingCartIcon /> }
