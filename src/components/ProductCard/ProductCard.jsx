@@ -3,7 +3,9 @@ import { Button, Card,CardContent,CardMedia,Typography,CardActionArea, Box } fro
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink } from 'react-router-dom';
 
-export default function ProductCard({product}) {
+export default function ProductCard({product, addToCart}) {
+
+ 
   return (
     <Card sx={{ width: '300px' }}>
       <Box
@@ -27,6 +29,7 @@ export default function ProductCard({product}) {
       </CardActionArea>
       </Box>
       <Button
+      onClick={() => addToCart(product)}
       sx={{width : '100%'}}
       startIcon={<ShoppingCartIcon /> }
       variant='contained'

@@ -21,7 +21,16 @@ export const instance = axios.create({
 function App() {
 
   const [products, setProducts] = useState([])
+  const [cart, setCart] = useState([])
 
+  console.log(products);
+  
+
+  const addToCart = (item) => {
+    setCart((prev) => {
+      return [...prev, item]
+    })
+  }
   useEffect(() => {
     instance.get('/products')
       .then((res) => setProducts(res.data))
@@ -32,9 +41,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/products' element={<Products products={products}/>} />
+          <Route path='/products' element={<Products products={products} addToCart={addToCart}/>} />
           <Route path='/products/:id' element={<Product />} />
-          <Route path='/carts' element={<Cart /> }/>
+          <Route path='/carts' element={<Cart cart={cart}/> }/>
         </Route>
       </Routes>
     </>
