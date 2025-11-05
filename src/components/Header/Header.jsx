@@ -18,7 +18,7 @@ const CartBadge = styled(Badge)`
 `;
 
 
-function Header() {
+function Header({cartLength}) {
 
   return (
     <AppBar sx={{ backgroundColor: "orange", mb: '30px' }} position='sticky'>
@@ -63,7 +63,7 @@ function Header() {
           >
             <IconButton>
               <ShoppingCartIcon fontSize="small" />
-              <CartBadge badgeContent={2} color="primary" overlap="circular" />
+              <CartBadge badgeContent={cartLength} color="primary" overlap="circular" />
             </IconButton>
           </Box>
 

@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { CartItem } from '../../components/CartItem/CartItem';
 
-export const Cart = ({cart}) => {
+export const Cart = ({ cart, updateCart }) => {
+  
   return (
     <div>
-      {
-        cart.map((c) => <h1>{c.title}</h1>)
-      }
+      <ul>
+        {
+          cart.map((c) => {
+            return < CartItem key={c.id} cart={c} updateCart={updateCart}/>
+          })
+        }
+      </ul>
     </div>
   )
 }
