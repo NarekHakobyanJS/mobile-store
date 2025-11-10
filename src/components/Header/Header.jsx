@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, AppBar, Box, Toolbar, IconButton, Typography, Container } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { productContext } from '../../app/provider/provider';
 
 
 const pages = [{ title: "Home", path: '/' }, { title: "Products", path: '/products' }];
@@ -18,8 +19,8 @@ const CartBadge = styled(Badge)`
 `;
 
 
-function Header({cartLength}) {
-
+function Header() {
+  const {cartLength} = useContext(productContext)
   return (
     <AppBar sx={{ backgroundColor: "orange", mb: '30px' }} position='sticky'>
       <Container maxWidth="xl">

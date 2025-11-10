@@ -1,9 +1,12 @@
 
+import { useContext } from 'react'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { Box } from '@mui/material'
+import { productContext } from '../../app/provider/provider'
 
-export const Products = ({products, addToCart}) => {
+export const Products = () => {
   
+  const {products, addToCart} = useContext(productContext)
 
   return (
     <Box>

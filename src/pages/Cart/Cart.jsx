@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { CartItem } from '../../components/CartItem/CartItem';
+import { productContext } from '../../app/provider/provider';
 
-export const Cart = ({ cart, updateCart }) => {
+export const Cart = () => {
   
+  const { cart, updateCart } = useContext(productContext)
   return (
     <div>
       <ul>

@@ -12,12 +12,13 @@ import { Product } from '../pages/Product/Product'
 
 
 import './styles/App.css'
+import { productContext } from './provider/provider'
 
 export const instance = axios.create({
   baseURL : 'https://fakestoreapi.com'
 })
 
-// [{id}, {id}] => 
+
 
 function App() {
 
@@ -80,14 +81,23 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Layout cartLength={cartLength}/>}>
+    <productContext.Provider value={{
+      cartLength,
+      products,
+      addToCart,
+      cart,
+      updateCart
+    }}>
+    <Routes>
+        <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/products' element={<Products products={products} addToCart={addToCart}/>} />
+          <Route path='/products' element={<Products />} />
           <Route path='/products/:id' element={<Product />} />
-          <Route path='/carts' element={<Cart cart={cart} updateCart={updateCart}/> }/>
+          <Route path='/carts' element={<Cart /> }/>
         </Route>
       </Routes>
+    </productContext.Provider>
+      
     </>
   )
 }
